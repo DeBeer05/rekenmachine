@@ -6,17 +6,41 @@
 # print("Het resultaat is:", c)
 
 ## iets moeilijkere variant van een rekenmachine. vraag 2 getallen en een operator waarna deze de bewerking uitvoert.
+# a = input("geef getal nummer 1 op: ")
+# b = input("geef getal nummer 2 op: ")
+# vo = input("geef op of je plus of min wilt: ")
+
+# match vo:
+#     case "plus":
+#         c = int(a) + int(b)
+#         print("Het resultaat is:", c)
+#     case "min":
+#         c = int(a) - int(b)
+#         print("Het resultaat is:", c)
+#     case _:
+#         print("Ongeldige operator, gebruik 'plus' of 'min'.")
+
+## nog moeilijkere variant van een rekenmachine. vraag 2 getallen en een operator waarna deze de bewerking uitvoert. nu ook vermenigvuldigen en delen. operators zijn +, -, *, /.
 a = input("geef getal nummer 1 op: ")
 b = input("geef getal nummer 2 op: ")
-vo = input("geef op of je plus of min wilt: ")
+vo = input("geef op of je +, -, *, / wilt: ")
 
 match vo:
-    case "plus":
+    case "+":
         c = int(a) + int(b)
         print("Het resultaat is:", c)
-    case "min":
+    case "-":
         c = int(a) - int(b)
         print("Het resultaat is:", c)
+    case "*":
+        c = int(a) * int(b)
+        print("Het resultaat is:", c)
+    case "/":
+        if int(b) != 0:
+            c = int(a) / int(b)
+            print("Het resultaat is:", c)
+        else:
+            print("Delen door nul is niet toegestaan.")
     case _:
-        print("Ongeldige operator, gebruik 'plus' of 'min'.")
+        print("Ongeldige operator, gebruik '+', '-', '*', of '/'.")
 
